@@ -1,7 +1,7 @@
 import React from 'react';
 // css in js
 import styled from 'styled-components';
-import PangImage from '../assets/cat1.jpg'
+import PangImage from '../assets/mainCat.png'
 import Button from 'react-bootstrap/Button'
 
 const Home = () => {
@@ -11,7 +11,7 @@ const Home = () => {
     <Contents>
       <Title>나에게 맞는 주인님은?</Title>
       <LogoImage>
-        <img src={PangImage} className="rounded-circle" width={350} height={350} alt='mainimage'></img>
+        <img src={PangImage} className="rounded-circle" width={330} height={330} alt='mainimage'></img>
       </LogoImage>
       <Desc>MBTI 기반으로 하는 나랑 잘맞는 고양이 찾기</Desc>
       <Button>테스트 시작하기</Button>
