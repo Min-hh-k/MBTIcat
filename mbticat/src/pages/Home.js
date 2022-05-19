@@ -3,8 +3,15 @@ import React from 'react';
 import styled from 'styled-components';
 import PangImage from '../assets/mainCat.png'
 import Button from 'react-bootstrap/Button'
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
+  const navigate = useNavigate();
+
+  const handleClickButton = () => {
+    navigate('/question');
+
+  }
   return (
     <Wrapper>
     <Header>예비집사 판별기</Header>
@@ -14,7 +21,7 @@ const Home = () => {
         <img src={PangImage} className="rounded-circle" width={330} height={330} alt='mainimage'></img>
       </LogoImage>
       <Desc>MBTI 기반으로 하는 나랑 잘맞는 고양이 찾기</Desc>
-      <Button>테스트 시작하기</Button>
+      <Button style={{fontFamily: "LeeSeoYun"}} onClick={handleClickButton}>테스트 시작하기</Button>
     </Contents>
     </Wrapper>
   )
@@ -33,19 +40,21 @@ const Header = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "LeeSeoYun"
 `
 
 const Contents = styled.div`
-display: flex;
-justify-content: center;.
-align-items: center;
-flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 `
 
 
 const Title = styled.div`
   font-size: 30pt;
-  marign-top: 40px;
+  margin-top: 40px;
+  font-family: "LeeSeoYun"
 `
 
 const LogoImage = styled.div`
@@ -54,4 +63,5 @@ const LogoImage = styled.div`
 const Desc = styled.div`
   font-size: 20pt;
   margin-top: 20px;
+  font-family: "LeeSeoYun"
 `

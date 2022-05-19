@@ -1,0 +1,8 @@
+.App {
+  font-family: "LeeSeoYun";
+}
+
+@font-face {
+  font-family: "LeeSeoYun";
+  src: url(./assets/fonts/LeeSeoyun.ttf);
+}
