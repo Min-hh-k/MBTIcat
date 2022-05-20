@@ -2,11 +2,22 @@ import React from 'react';
 // css in js
 import styled from 'styled-components';
 import Button from 'react-bootstrap/Button'
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import { ResultData } from '../assets/data/resultdata';
 
 const Result = () => {
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
+  const mbti = searchParams.get('mbti');
+  // 최종 도출한 결과 객체
+  const [resultData, setResultData] = React.useState({})
+
+  React.useEffect(() => {
+    const result = ResultData.find((s) => s.best === mbti)
+    setResultData(result);
+  },[mbti])
+
+  console.log(resultData)
   return (
     
     <Wrapper>
@@ -14,9 +25,11 @@ const Result = () => {
     <Contents>
       <Title>결과 보기?</Title>
       <LogoImage>
-        <img src={ ResultData[0].image } className="rounded-circle" width={330} height={330} alt='mainimage'></img>
+        <img src={ resultData.image } className="rounded-circle" width={330} height={330} alt='mainimage'></img>
       </LogoImage>
-      <Desc>예비 집사님과 찰떡궁합인 고양이는 { ResultData[0].name } 입니다.</Desc>
+      <Desc>예비 집사님은 { resultData.best } 입니다.</Desc>
+      <Desc>예비 집사님과 찰떡궁합인 고양이는 { resultData.name } 입니다.</Desc>
+      <Desc style={{width : '200pt'}}> { resultData.desc }</Desc>
       <Button style={{fontFamily: "LeeSeoYun"}} onClick={() => navigate("/")} >테스트 시작하기</Button>
     </Contents>
     </Wrapper>
