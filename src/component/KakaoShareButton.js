@@ -30,7 +30,7 @@ const KakaoShareButton = ({data}) => {
           title: '나도 테스트 하러가기',
           link: {
             mobileWebUrl: url,
-            webUrl: resultUrl,
+            webUrl: url,
           },
         },
       ]
