@@ -33,7 +33,7 @@ const Result = () => {
       <Desc style={{width : '200pt'}}> { resultData.desc }</Desc>
       <ButtonGroup>
       <Button style={{fontFamily: "LeeSeoYun"}} onClick={() => navigate("/")} >테스트 시작하기</Button>
-      <KakaoShareButton date={resultData} />
+      <KakaoShareButton data={resultData} />
       </ButtonGroup>
     </Contents>
     </Wrapper>
