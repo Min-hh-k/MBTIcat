@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import Button from 'react-bootstrap/Button'
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { ResultData } from '../assets/data/resultdata';
+import KakaoShareButton from '../component/KakaoShareButton';
 
 const Result = () => {
   const navigate = useNavigate();
@@ -30,7 +31,10 @@ const Result = () => {
       <Desc>예비 집사님은 { resultData.best } 입니다.</Desc>
       <Desc>예비 집사님과 찰떡궁합인 고양이는 { resultData.name } 입니다.</Desc>
       <Desc style={{width : '200pt'}}> { resultData.desc }</Desc>
+      <ButtonGroup>
       <Button style={{fontFamily: "LeeSeoYun"}} onClick={() => navigate("/")} >테스트 시작하기</Button>
+      <KakaoShareButton></KakaoShareButton>
+      </ButtonGroup>
     </Contents>
     </Wrapper>
   )
@@ -72,4 +76,8 @@ const Desc = styled.div`
   font-size: 20pt;
   margin-top: 20px;
   font-family: "LeeSeoYun"
+`
+const ButtonGroup = styled.div`
+  display: flex;
+  flex-direction: row;
 `
