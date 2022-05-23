@@ -40,7 +40,7 @@ const Header = styled.div`
   width: 100%;
   background-color: hotpink;
   color: white;
-  font-size: 45pt;
+  font-size: 40pt;
   display: flex;
   justify-content: center;
   align-items: center;
