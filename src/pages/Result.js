@@ -44,7 +44,7 @@ const Result = () => {
 export default Result;
 
 const Wrapper = styled.div`
-  height: 135vh;
+  height: 145vh;
   width: 100%;
   background-color: pink;
 `
@@ -89,7 +89,7 @@ const Desc = styled.div`
 
 const Desc2 = styled.div`
   font-size: 30pt;
-  color:  white;
+  color: white;
   margin: 0 10px 0 10px;
 `
 
