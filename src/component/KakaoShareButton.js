@@ -37,7 +37,7 @@ const KakaoShareButton = ({data}) => {
   }
 
   return (
-    <Button onClick={shareKakao} style={{fontFamily: "LeeSeoYun", marginLeft: '20px'}} >카카오톡 공유하기</Button>
+    <Button variant="secondary" onClick={shareKakao} style={{fontFamily: "LeeSeoYun", marginLeft: '20px'}} >테스트결과 카카오톡 공유하기</Button>
   )
 }
 

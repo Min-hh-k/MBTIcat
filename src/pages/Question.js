@@ -64,23 +64,28 @@ const Question = () => {
 
 
   return (
+    <Root>
     <Wrapper>
-        <ProgressBar striped variant="danger" now={(questionNo / QuestionData.length) * 100} style={{marginTop: '20px' }}/>
+        <ProgressBar striped variant="danger" now={(questionNo / QuestionData.length) * 100} style={{marginBottom: '30px', height: "30px"}}/>
         <Title>{QuestionData[questionNo].title}</Title>
         <ButtonGroup>
-          <Button onClick={() => handleClickButton(1, QuestionData[questionNo].type)} style={{width: "40%", minHeight: "200px", fontSize: "15pt"}}>{QuestionData[questionNo].answera}</Button>
-          <Button onClick={() => handleClickButton(0, QuestionData[questionNo].type)} style={{width: "40%", minHeight: "200px", fontSize: "15pt", marginLeft:"20px"}}>{QuestionData[questionNo].answerb}</Button>
+          <Button variant="secondary" onClick={() => handleClickButton(1, QuestionData[questionNo].type)} style={{width: "40%", minHeight: "200px", fontSize: "15pt"}}>{QuestionData[questionNo].answera}</Button>
+          <Button variant="secondary" onClick={() => handleClickButton(0, QuestionData[questionNo].type)} style={{width: "40%", minHeight: "200px", fontSize: "15pt", marginLeft:"20px"}}>{QuestionData[questionNo].answerb}</Button>
         </ButtonGroup>
-
     </Wrapper>
+    </Root>
   )
 }
 
 export default Question;
 
+const Root = styled.div`
+
+`
 const Wrapper = styled.div`
   height: 100vh;
   width: 100%;
+  background-color: pink;
 `
 const Title = styled.div`
   font-size: 40pt;

@@ -14,14 +14,14 @@ const Home = () => {
   }
   return (
     <Wrapper>
-    <Header>예비집사 판별기</Header>
+    <Header>😼예비집사 판별기😼</Header>
     <Contents>
       <Title>나에게 맞는 주인님은?</Title>
       <LogoImage>
         <img src={PangImage} className="rounded-circle" width={330} height={330} alt='mainimage'></img>
       </LogoImage>
       <Desc>MBTI 기반으로 하는 나랑 잘맞는 고양이 찾기</Desc>
-      <Button style={{fontFamily: "LeeSeoYun"}} onClick={handleClickButton}>테스트 시작하기</Button>
+      <Button variant="secondary" style={{fontFamily: "LeeSeoYun", marginTop: "20px"}} onClick={handleClickButton}>테스트 시작하기</Button>
     </Contents>
     </Wrapper>
   )
@@ -36,7 +36,11 @@ const Wrapper = styled.div`
 `
 
 const Header = styled.div`
-  font-size: 40pt;
+  height: 12vh;
+  width: 100%;
+  background-color: hotpink;
+  color: white;
+  font-size: 45pt;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -55,6 +59,7 @@ const Title = styled.div`
   font-size: 30pt;
   margin-top: 40px;
   font-family: "LeeSeoYun"
+
 `
 
 const LogoImage = styled.div`
